@@ -62,7 +62,7 @@ class _WelcomePageState extends State<WelcomePage> {
               width: 250,              
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.brown,
+                color: Color(0xff76453B),
                 borderRadius: BorderRadius.circular(10.0)),
               child: 
               Text(

@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CircleAvatarIndicator extends StatelessWidget {
@@ -22,7 +24,7 @@ class CircleAvatarIndicator extends StatelessWidget {
         padding: EdgeInsets.all(dotSpacing),
         child: CircleAvatar(
           backgroundColor: index == currentPage
-              ? Colors.brown
+              ? Color(0xff76453B)
               : Colors.grey[300],
           radius: dotSize / 2,
         ),
