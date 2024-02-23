@@ -22,6 +22,6 @@ class CartProvider extends ChangeNotifier {
   }
 
   double getCartTotal() {
-    return _items.fold(0, (previousValue, item) => previousValue + item.price);
+    return _items.fold(0, (previousValue, items) => previousValue + items.price);
   }
 }

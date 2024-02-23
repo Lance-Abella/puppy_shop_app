@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:puppy_shop_app/pages/home_screen.dart';
 import 'package:puppy_shop_app/pages/puppy_details.dart';
 import 'package:puppy_shop_app/provider/cart_provider.dart';
 import 'package:puppy_shop_app/provider/catalog_provider.dart';
@@ -53,19 +54,28 @@ class _CatalogState extends State<Catalog> {
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0.0,
-        leading: Container(
-          margin: EdgeInsets.all(10),
-          alignment: Alignment.center,
-          child: Image(
-            image: AssetImage('assets/backarrow-g.jpg'),
-            height: 20,
-            width: 20,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10)
+
+
+        leading: GestureDetector(
+           onTap: () {
+              Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Home()));
+            },
+          child: Container(
+            margin: EdgeInsets.all(10),
+            alignment: Alignment.center,
+            child: Image(
+              image: AssetImage('assets/backarrow-g.jpg'),
+              height: 20,
+              width: 20,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
+            ),
           ),
         ),
+
+
         actions: [
           Container(
           margin: EdgeInsets.all(10),
