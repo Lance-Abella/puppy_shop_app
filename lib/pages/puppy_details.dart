@@ -33,8 +33,7 @@ class PuppyDetails extends StatelessWidget {
 
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.start,
+                child: Column(                  
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
