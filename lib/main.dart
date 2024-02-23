@@ -1,10 +1,27 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:puppy_shop_app/welcome_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:puppy_shop_app/pages/welcome_screen.dart';
+import 'package:puppy_shop_app/provider/cart_provider.dart';
+
+import 'provider/catalog_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => CartProvider()
+        ),
+
+        ChangeNotifierProvider(
+          create: (context) => CatalogProvider()  
+        ),
+      ],
+      child: const MyApp()
+      ), 
+    );    
 }
 
 class MyApp extends StatelessWidget {

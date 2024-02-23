@@ -2,9 +2,11 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:puppy_shop_app/shared_data/bottom_navbar.dart';
 import 'package:puppy_shop_app/shared_data/text_styles.dart';
-import 'shared_data/page_indicator.dart';
-import 'shared_data/slide_data.dart';
+import '../shared_data/page_indicator.dart';
+import '../shared_data/slide_data.dart';
 
 class WelcomePage extends StatefulWidget {
   WelcomePage({super.key});
@@ -55,21 +57,26 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
 
-          Align(
-            alignment: Alignment.bottomCenter,  
-            child: Container(
-              margin: EdgeInsets.only(bottom: 20),
-              width: 250,              
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Color(0xff76453B),
-                borderRadius: BorderRadius.circular(10.0)),
-              child: 
-              Text(
-                "Get Started",
-                style: TextStyles.button1Style,
-                textAlign: TextAlign.center,
-              )
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Navbar()));
+            },
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: EdgeInsets.only(bottom: 20),
+                width: 250,              
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Color(0xff76453B),
+                  borderRadius: BorderRadius.circular(10.0)),
+                child: 
+                Text(
+                  "Get Started",
+                  style: TextStyles.button1Style,
+                  textAlign: TextAlign.center,
+                )
+              ),
             ),
           ),
 

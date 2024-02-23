@@ -20,4 +20,10 @@ class TextStyles {
     fontWeight: FontWeight.w500,
   );
 
+   static final TextStyle appbarStyle = TextStyle(
+    fontSize: 20,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+
 }
